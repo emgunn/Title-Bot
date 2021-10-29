@@ -22,17 +22,18 @@ const callBackendAPI = async () => {
 
 function App() {
 
-    const [connectionMsg, setConnectionMsg] = useState("Your Express backend is not connected to React.");
+    const [connectionMsg, setConnectionMsg] = useState("Eric Gunn 2021");
 
-    useEffect( () => {
-        // code to run on component mount
-        callBackendAPI()
-            .then(res => {
-                // console.log(res.express);
-                setConnectionMsg(res.express);
-            })
-            .catch(err => console.log("Error: "  + err));
-    }, []);
+    // used for testing to see if React is connected to our proxied backend Express server
+    // useEffect( () => {
+    //     // code to run on component mount
+    //     callBackendAPI()
+    //         .then(res => {
+    //             // console.log(res.express);
+    //             setConnectionMsg(res.express);
+    //         })
+    //         .catch(err => console.log("Error: "  + err));
+    // }, []);
 
     
     return (
